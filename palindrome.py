@@ -15,9 +15,9 @@ def find_palindrome(raw_string):
 
 try:
     with open(args.in_file, 'r', encoding='utf-8') as in_file:
-        for line in in_file.readlines():
-            if find_palindrome(line.rstrip()):
-                with open(args.out_file, 'a', encoding='utf-8') as out_file:
+        with open(args.out_file, 'w', encoding='utf-8') as out_file:
+            for line in in_file.readlines():
+                if find_palindrome(line.rstrip()):
                     out_file.write(line)
     print('Done')
 except FileNotFoundError:
