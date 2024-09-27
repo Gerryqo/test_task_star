@@ -22,5 +22,3 @@ try:
     print('Done')
 except FileNotFoundError:
     print('The incoming file was not found')
-except Exception as e:
-    print(e)
